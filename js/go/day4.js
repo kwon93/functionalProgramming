@@ -67,13 +67,6 @@ const go = (...args) => reduce((a, f) => f(a), args);
 const pipe = (...fs) => (a) => go(a, ...fs);
 
 
-const goResult = go([
-  0,
-  a => a + 1,
-  a => a + 10,
-  a => a + 100,
-]);
-
 const f = pipe(
   a => a + 1,
   a => a + 10,
@@ -88,3 +81,8 @@ const f = pipe(
 
 const curry = f =>
   (a, ..._) => _.length ? f(a, ..._) : (..._) => f(a, ..._);
+
+
+const multi = (a, b) => a * b;
+console.log(multi);
+
