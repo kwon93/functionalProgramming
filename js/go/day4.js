@@ -79,8 +79,7 @@ const f = pipe(
  * 함수를 리턴하고 원하는 시점에서 함수를 평가시키는 함수
  */
 
-const curry = f =>
-  (a, ..._) => _.length ? f(a, ..._) : (..._) => f(a, ..._);
+const curry = f => (a, ..._) => _.length ? f(a, ..._) : (..._) => f(a, ..._);
 
 
 const multi = (a, b) => a * b;
