@@ -54,3 +54,5 @@ function* a() {
 }
 
 log(join(' - ', a()))
+
+

@@ -50,3 +50,11 @@ export const find = curry((fn, iter) => go(
 ));
 
 export const pipe = (...fs) => (a) => go(a, ...fs);
+
+const isIterable = a => a && a[Symbol.iterator];
+export function* flatten(iter) {
+  for (const a of iter) {
+    if (isIterable(a)) for (const b of a) yield b;
+    else yield a;
+  }
+};
