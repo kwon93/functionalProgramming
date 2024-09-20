@@ -23,5 +23,8 @@
     "webpack-dev-server": "^5.0.4",
     "webpack-merge": "^5.10.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "fxjs": "^0.21.3"
+  }
 }
